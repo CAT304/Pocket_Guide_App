@@ -8,9 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.pocket_guide.DummyActivity;
-import com.example.pocket_guide.MainActivity;
 import com.example.pocket_guide.Model.Location;
 import com.example.pocket_guide.R;
 import com.squareup.picasso.Picasso;
@@ -38,15 +36,24 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position){
         Location location = mLocations.get(position);
-        holder.location_name.setText(location.getLocationName());
-        Picasso.get().load(location.getLocationImageUri()).placeholder(R.mipmap.ic_launcher).into(holder.location_image);
+        holder.location_name.setText(location.getName());
+        Picasso.get().load(location.getImageUri()).placeholder(R.mipmap.ic_launcher).into(holder.location_image);
         // when we click the location name the function below is executed.
         holder.location_name.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                Intent intent = new Intent(mContext, DummyActivity.class);
-               intent.putExtra("LocationId", location.getLocationId());
+               intent.putExtra("Name", location.getName());
                mContext.startActivity(intent);
+            }
+        });
+        // when we click the location image the function below is executed.
+        holder.location_image.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mContext, DummyActivity.class);
+                intent.putExtra("Name", location.getName());
+                mContext.startActivity(intent);
             }
         });
     }
@@ -60,17 +67,11 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.ViewHo
 
         public CircleImageView location_image;
         public TextView location_name;
-
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             location_image = itemView.findViewById(R.id.location_image);
             location_name = itemView.findViewById(R.id.location_name);
         }
-
     }
-
 }
-
-
-
 

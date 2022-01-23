@@ -1,71 +1,31 @@
 package com.example.pocket_guide.Model;
 
 public class Location {
-    private String LocationDetails;
-    private String LocationId;
-    private String LocationImageUri;
-    private String LocationName;
-    private String LocationRatings;
-    private String LocationReviews;
+    private String imageUri;
+    private String Name;
 
     public Location(){
 
     }
 
-    public Location(String locationDetails, String locationId, String locationImageUri, String locationName, String locationRatings, String locationReviews) {
-        LocationDetails = locationDetails;
-        LocationId = locationId;
-        LocationImageUri = locationImageUri;
-        LocationName = locationName;
-        LocationRatings = locationRatings;
-        LocationReviews = locationReviews;
+    public Location(String imageUri, String name) {
+        this.imageUri = imageUri;
+        Name = name;
     }
 
-    public String getLocationDetails() {
-        return LocationDetails;
+    public String getImageUri() {
+        return imageUri;
     }
 
-    public void setLocationDetails(String locationDetails) {
-        LocationDetails = locationDetails;
+    public void setImageUri(String imageUri) {
+        this.imageUri = imageUri;
     }
 
-    public String getLocationId() {
-        return LocationId;
+    public String getName() {
+        return Name;
     }
 
-    public void setLocationId(String locationId) {
-        LocationId = locationId;
-    }
-
-    public String getLocationImageUri() {
-        return LocationImageUri;
-    }
-
-    public void setLocationImageUri(String locationImageUri) {
-        LocationImageUri = locationImageUri;
-    }
-
-    public String getLocationName() {
-        return LocationName;
-    }
-
-    public void setLocationName(String locationName) {
-        LocationName = locationName;
-    }
-
-    public String getLocationRatings() {
-        return LocationRatings;
-    }
-
-    public void setLocationRatings(String locationRatings) {
-        LocationRatings = locationRatings;
-    }
-
-    public String getLocationReviews() {
-        return LocationReviews;
-    }
-
-    public void setLocationReviews(String locationReviews) {
-        LocationReviews = locationReviews;
+    public void setName(String name) {
+        Name = name;
     }
 }

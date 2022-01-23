@@ -15,9 +15,9 @@ public class DummyActivity extends AppCompatActivity {
         // read the data to other fragment [5.23]
         Bundle intent = getIntent().getExtras();
         if(intent !=null){
-            String locationId = intent.getString("LocationId");
-            getSharedPreferences("LOCATION", MODE_PRIVATE).edit().putString("LocationID", locationId).apply();
-            Toast.makeText(this, locationId, Toast.LENGTH_SHORT).show();
+            String place_name = intent.getString("Name");
+            getSharedPreferences("Name", MODE_PRIVATE).edit().putString("Name", place_name).apply();
+            Toast.makeText(this, place_name, Toast.LENGTH_SHORT).show();
         }
     }
 

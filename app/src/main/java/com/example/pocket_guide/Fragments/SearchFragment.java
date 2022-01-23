@@ -84,8 +84,7 @@ public class SearchFragment extends Fragment {
     }// read location
 
     private void searchLocation(String s){
-        Query query = FirebaseDatabase.getInstance().getReference().child("Location")
-                .orderByChild("LocationName").startAt(s).endAt(s+"\uf8ff");
+        Query query = FirebaseDatabase.getInstance().getReference().child("Places").orderByChild("Name").startAt(s).endAt(s+"\uf8ff");
         query.addValueEventListener(new ValueEventListener(){
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot){
@@ -103,18 +102,4 @@ public class SearchFragment extends Fragment {
         });
     }
 }// mega one
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
