@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "977464259251",
+    "firebase_url": "https://pocket-guide-304-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "pocket-guide-304",
+    "storage_bucket": "pocket-guide-304.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977464259251:android:e645da59855b59fd5bb6c6",
+        "android_client_info": {
+          "package_name": "com.example.pocket_guide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977464259251-iu849ffblas6is040ud72opgv7uqvfg3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA65Moo6xVfRCfEQrsiVxL_crHHUuEAstU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977464259251-iu849ffblas6is040ud72opgv7uqvfg3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
