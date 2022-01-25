@@ -1,7 +1,6 @@
 package com.example.pocket_guide;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class DummyActivity extends AppCompatActivity {

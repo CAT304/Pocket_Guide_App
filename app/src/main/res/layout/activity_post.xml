@@ -31,7 +31,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="15dp"
                     android:text="POST"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="18sp"
                     tools:ignore="InOrMmUsage" />
 
@@ -67,11 +67,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:hint="Location name..."
+            android:maxLines="5"
+            android:id="@+id/location_name"
+            app:socialFlags="hashtag|mention"
+            app:hashtagColor="@color/black"/>
+
+        <com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:hint="Description..."
             android:maxLines="5"
             android:id="@+id/description"
             app:socialFlags="hashtag|mention"
             app:hashtagColor="@color/black"/>
+
 
     </LinearLayout>
 
