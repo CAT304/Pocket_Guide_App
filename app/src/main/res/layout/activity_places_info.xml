@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Places_info">
+
+    <ImageView
+        android:id="@+id/picplace"
+        android:layout_width="411dp"
+        android:layout_height="261dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/List_reviews"
+        app:layout_constraintEnd_toStartOf="@+id/Ratings"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/picplace" />
+
+    <TextView
+        android:id="@+id/Ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ratings"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/picplace"
+        app:layout_constraintVertical_bias="0.151" />
+
+
+    <Button
+        android:id="@+id/acptbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accept"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961" />
+
+    <EditText
+        android:id="@+id/etReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Add Reviews here"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/List_reviews"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Button
+        android:id="@+id/Enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Enter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etReview"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/etReview"
+        app:layout_constraintTop_toBottomOf="@+id/etReview"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ListView
+        android:id="@+id/List_reviews"
+        android:layout_width="409dp"
+        android:layout_height="174dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/picplace"
+        app:layout_constraintVertical_bias="0.418" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
