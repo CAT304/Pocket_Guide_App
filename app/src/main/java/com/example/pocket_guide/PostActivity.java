@@ -1,7 +1,7 @@
 package com.example.pocket_guide;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
@@ -26,10 +26,6 @@ import com.hendraanggrian.appcompat.socialview.Hashtag;
 import com.hendraanggrian.appcompat.widget.HashtagArrayAdapter;
 import com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView;
 import com.theartofdev.edmodo.cropper.CropImage;
-
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
@@ -93,16 +89,13 @@ public class PostActivity extends AppCompatActivity {
                     Toast.makeText(this, location_name.getText().toString(), Toast.LENGTH_SHORT).show();
                     Toast.makeText(this, description.getText().toString(), Toast.LENGTH_SHORT).show();
 
-                    String Test_ID = "testid69"; // set the user id
                     HashMap<String , Object> map = new HashMap<>();
                     map.put("postid" , Post_ID);
                     map.put("imageurl" , imageUrl);
                     map.put("description" , description.getText().toString());
-                    map.put("publisher" , Test_ID);
+                    map.put("publisher" , FirebaseAuth.getInstance().getCurrentUser().getUid());
                     map.put("location_name", location_name.getText().toString());
                     map.put("post_time", PostTime);
-
-                    //map.put("publisher" , FirebaseAuth.getInstance().getCurrentUser().getUid()); ----------------------> gotta change back this line
 
                     if (Post_ID != null) {
                         databaseReference.child(Post_ID).setValue(map);
