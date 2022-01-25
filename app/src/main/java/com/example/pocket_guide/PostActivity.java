@@ -1,8 +1,11 @@
 package com.example.pocket_guide;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.icu.text.SimpleDateFormat;
+import android.icu.util.TimeZone;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -23,10 +26,15 @@ import com.hendraanggrian.appcompat.socialview.Hashtag;
 import com.hendraanggrian.appcompat.widget.HashtagArrayAdapter;
 import com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView;
 import com.theartofdev.edmodo.cropper.CropImage;
-import java.util.HashMap;
-import java.util.Objects;
+
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Objects;
+
 
 
 public class PostActivity extends AppCompatActivity {
@@ -74,8 +82,12 @@ public class PostActivity extends AppCompatActivity {
                     databaseReference = FirebaseDatabase.getInstance().getReference("Posts");
                     String Post_ID = databaseReference.push().getKey();
 
-                    java.util.Date date = new java.util.Date();
-                    Toast.makeText(this, date.toString(), Toast.LENGTH_SHORT).show();
+                    Date date = new Date();
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault());
+                    sdf.setTimeZone(TimeZone.getTimeZone("GMT+08:00"));
+                    String PostTime = sdf.format(date);
+
+                    Toast.makeText(this, PostTime, Toast.LENGTH_SHORT).show();
                     Toast.makeText(this, Post_ID, Toast.LENGTH_SHORT).show();
                     Toast.makeText(this, imageUrl, Toast.LENGTH_SHORT).show();
                     Toast.makeText(this, location_name.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -88,7 +100,8 @@ public class PostActivity extends AppCompatActivity {
                     map.put("description" , description.getText().toString());
                     map.put("publisher" , Test_ID);
                     map.put("location_name", location_name.getText().toString());
-                    map.put("post time", date.toString());
+                    map.put("post_time", PostTime);
+
                     //map.put("publisher" , FirebaseAuth.getInstance().getCurrentUser().getUid()); ----------------------> gotta change back this line
 
                     if (Post_ID != null) {
