@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,9 +35,10 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Places_info extends AppCompatActivity {
-        TextView a,b;
+        TextView a,b , name;
         EditText review;
-        Button btn , etr;
+        FloatingActionButton btn;
+        Button etr;
         ImageView img;
         DatabaseReference reff , rew , lrew;
         StorageReference storageReference;
@@ -53,7 +55,8 @@ public class Places_info extends AppCompatActivity {
                 placename = "Tanjung Bungah";
                 a=(TextView) findViewById(R.id.Ratings);
                 b=(TextView) findViewById(R.id.Details);
-                btn=(Button) findViewById(R.id.acptbtn);
+                name=(TextView) findViewById(R.id.place_name) ;
+                btn=(FloatingActionButton)findViewById(R.id.acptbtn);
                 img=(ImageView)findViewById(R.id.picplace);
 
                 review = findViewById(R.id.etReview);
@@ -136,6 +139,7 @@ public class Places_info extends AppCompatActivity {
                                 String ratings = Objects.requireNonNull(snapshot.child("Ratings").getValue()).toString();
                                 a.setText(ratings);
                                 b.setText(details);
+                                name.setText(placename);
                         }
 
                         @Override

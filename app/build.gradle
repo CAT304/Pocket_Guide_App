@@ -48,5 +48,6 @@ dependencies {
 
     implementation "androidx.viewpager2:viewpager2:1.0.0"
     implementation 'com.firebaseui:firebase-ui-database:6.3.0'
+    implementation 'com.android.support:design:31.0.0'
     
 }
