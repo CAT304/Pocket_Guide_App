@@ -31,6 +31,7 @@ import com.google.firebase.storage.StorageReference;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Places_info extends AppCompatActivity {
         TextView a,b;
@@ -69,7 +70,8 @@ public class Places_info extends AppCompatActivity {
                 btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-
+                                Intent i = new Intent(Places_info.this,Places_video.class);
+                                startActivity(i);
                         }
                 });
 
@@ -96,7 +98,7 @@ public class Places_info extends AppCompatActivity {
                                 }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                        Toast.makeText(Places_info.this,"Failed to retrive",Toast.LENGTH_SHORT);
+                                        Toast.makeText(Places_info.this,"Failed to retrive",Toast.LENGTH_SHORT).show();
                                 }
                         });
                 } catch (IOException e) {
@@ -108,7 +110,12 @@ public class Places_info extends AppCompatActivity {
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 list.clear();
                                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                                        list.add(snapshot.getValue().toString());
+                                        String temp_review = snapshot.getValue().toString();
+                                        String temp_review1 = temp_review.substring(8);
+                                        temp_review1 = temp_review1.substring(0, temp_review1.length() - 1);
+                                        list.add(Objects.requireNonNull(temp_review1));
+                 //                       Toast.makeText(Places_info.this,"Data"+ snapshot.getValue().toString(),Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Places_info.this,"Data"+ temp_review1,Toast.LENGTH_SHORT).show();
                                 }
                                 adapter.notifyDataSetChanged();
 
@@ -125,8 +132,8 @@ public class Places_info extends AppCompatActivity {
                 reff.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                String details = snapshot.child("Details").getValue().toString();
-                                String ratings = snapshot.child("Ratings").getValue().toString();
+                                String details = Objects.requireNonNull(snapshot.child("Details").getValue()).toString();
+                                String ratings = Objects.requireNonNull(snapshot.child("Ratings").getValue()).toString();
                                 a.setText(ratings);
                                 b.setText(details);
                         }
@@ -146,10 +153,7 @@ public class Places_info extends AppCompatActivity {
                 ReviewData rd = new ReviewData(reviews);
 
                 rew.push().setValue(rd);// To insert the new record
-                Toast.makeText(Places_info.this,"Data inserted",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Places_info.this,"Data inserted" ,Toast.LENGTH_SHORT).show();
         }
-
-
-
 
 }

@@ -83,8 +83,8 @@
 
     <ListView
         android:id="@+id/List_reviews"
-        android:layout_width="409dp"
-        android:layout_height="174dp"
+        android:layout_width="290dp"
+        android:layout_height="176dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
