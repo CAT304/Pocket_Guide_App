@@ -25,7 +25,7 @@
             android:name=".Dummy"
             android:exported="false" />
         <activity
-            android:name=".StartActivity"
+            android:name=".Places_info"
             android:exported="false" />
         <activity
             android:name=".DummyActivity"
@@ -43,7 +43,7 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".Places_info"
+            android:name=".StartActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Pocket_Guide.NoActionBar">

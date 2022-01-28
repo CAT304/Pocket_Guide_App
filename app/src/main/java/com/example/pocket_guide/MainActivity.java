@@ -1,18 +1,16 @@
 package com.example.pocket_guide;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 
-import com.example.pocket_guide.Fragment.NewsFeed;
+import com.example.pocket_guide.Fragments.NewsFeed;
+import com.example.pocket_guide.Fragments.SearchFragment;
 import com.example.pocket_guide.databinding.ActivityMainBinding;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,12 +30,15 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new NewsFeed());
                     break;
                 case R.id.nav_search:
+                    replaceFragment(new SearchFragment());
                     break;
                 case R.id.nav_add:
+                    startActivity(new Intent(MainActivity.this,PostActivity.class));
                     break;
                 case R.id.nav_heart:
                     break;
                 case R.id.nav_video:
+                    startActivity(new Intent(MainActivity.this,Places_video.class));
                     break;
             }
 

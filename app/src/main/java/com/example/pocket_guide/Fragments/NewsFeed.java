@@ -1,4 +1,4 @@
-package com.example.pocket_guide.Fragment;
+package com.example.pocket_guide.Fragments;
 
 import android.os.Bundle;
 
@@ -39,8 +39,8 @@ public class NewsFeed extends Fragment {
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        linearLayoutManager.setReverseLayout(true);
-        linearLayoutManager.setStackFromEnd(true);
+        linearLayoutManager.setReverseLayout(false);
+        linearLayoutManager.setStackFromEnd(false);
         recyclerView.setLayoutManager(linearLayoutManager);
         postList = new ArrayList<>();
         postAdapter = new PostAdapter(getContext(),postList);
