@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.pocket_guide.DummyActivity;
 import com.example.pocket_guide.Model.Location;
+import com.example.pocket_guide.Places_info;
 import com.example.pocket_guide.R;
 import com.squareup.picasso.Picasso;
 import java.util.List;
@@ -42,7 +43,7 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.ViewHo
         holder.location_name.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-               Intent intent = new Intent(mContext, DummyActivity.class);
+               Intent intent = new Intent(mContext, Places_info.class);
                intent.putExtra("Name", location.getName());
                mContext.startActivity(intent);
             }

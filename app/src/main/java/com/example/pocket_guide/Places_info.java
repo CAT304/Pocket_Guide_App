@@ -44,15 +44,21 @@ public class Places_info extends AppCompatActivity {
         StorageReference storageReference;
         Uri imageuri;
         ListView listView;
-        String placename;
-
+        String placename, place_name;
 
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_places_info);
-                placename = "Tanjung Bungah";
+
+                Bundle intent = getIntent().getExtras();
+                if(intent !=null){
+                        place_name = intent.getString("Name");
+                        getSharedPreferences("Name", MODE_PRIVATE).edit().putString("Name", place_name).apply();
+                }
+
+                placename = place_name;
                 a=(TextView) findViewById(R.id.Ratings);
                 b=(TextView) findViewById(R.id.Details);
                 name=(TextView) findViewById(R.id.place_name) ;
