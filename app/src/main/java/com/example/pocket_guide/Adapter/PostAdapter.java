@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.pocket_guide.Model.Display_Post;
+import com.example.pocket_guide.Model.User;
 import com.example.pocket_guide.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -20,7 +21,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.auth.User;
 
 import java.util.List;
 
@@ -58,7 +58,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             holder.caption.setText(post.getDescription());
         }
 
-        //publisherInfo(holder.image_profile,holder.username,holder.publisher,post.getPublisher());
+        publisherInfo(holder.image_profile,holder.username,holder.publisher,post.getPublisher());
 
     }
 
@@ -95,9 +95,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
-                //Glide.with(mContext).load(user.getImageurl()).into(image_profile);
-                //username.setText(user.getUsername());
-                //publisher.setText(user.getUsername());
+                Glide.with(mContext).load(user.getimagetoken()).into(image_profile);
+                username.setText(user.getUsername());
+                publisher.setText(user.getUsername());
             }
 
             @Override
