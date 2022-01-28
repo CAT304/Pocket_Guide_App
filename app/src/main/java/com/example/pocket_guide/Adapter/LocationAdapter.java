@@ -64,7 +64,6 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-
         public CircleImageView location_image;
         public TextView location_name;
         public ViewHolder(@NonNull View itemView) {
