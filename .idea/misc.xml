@@ -3,13 +3,45 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21296296296296297" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/drawable/button_background.xml" value="0.24259259259259258" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/drawable/button_black.xml" value="0.24259259259259258" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/drawable/edittext_background.xml" value="0.2703125" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/layout/activity_login.xml" value="0.176" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/layout/activity_main.xml" value="0.12360688956433637" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/layout/activity_register.xml" value="0.176" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/layout/activity_start.xml" value="0.19647822057460612" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/menu/menu_main.xml" value="0.176" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pocket_Guide/app/src/main/res/layout/activity_main.xml" value="0.22" />
+
         <entry key="..\:/Users/omsyaran/Desktop/Pocket_Guide_App/app/src/main/res/drawable/ic_close2_foreground.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/omsyaran/Desktop/Pocket_Guide_App/app/src/main/res/drawable/ic_search_foreground.xml" value="0.2" />
+
+
+        <entry key="..\:/Users/omsyaran/Desktop/Pocket_Guide_App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/omsyaran/Desktop/Pocket_Guide_App/app/src/main/res/drawable/ic_close_background.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/omsyaran/Desktop/Pocket_Guide_App/app/src/main/res/drawable/ic_close_foreground.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/omsyaran/Desktop/Pocket_Guide_App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/omsyaran/Desktop/Pocket_Guide_App/app/src/main/res/drawable/ic_search_foreground.xml" value="0.2" />
+        <entry key="..\:/Users/omsyaran/Desktop/Pocket_Guide_App/app/src/main/res/layout/activity_post.xml" value="0.25833333333333336" />
+
         <entry key="..\:/Users/omsyaran/Desktop/Pocket_Guide_App/app/src/main/res/layout/fragment_first.xml" value="0.264" />
         <entry key="..\:/Users/omsyaran/Desktop/Pocket_Guide_App/app/src/main/res/layout/fragment_search.xml" value="0.27546296296296297" />
         <entry key="..\:/Users/omsyaran/Desktop/Pocket_Guide_App/app/src/main/res/layout/location_item.xml" value="0.72" />
         <entry key="..\:/Users/omsyaran/Desktop/Pocket_Guide_App/app/src/main/res/menu/menu_main.xml" value="0.1" />
+
+
+
+        <entry key="..\:/Users/ROG/Desktop/COMPUTER SCIENCE/Sem 5/CAT 304/Pocket_Guide_App/app/src/main/res/layout/activity_dummy.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ROG/Desktop/COMPUTER SCIENCE/Sem 5/CAT 304/Pocket_Guide_App/app/src/main/res/layout/activity_places_info.xml" value="0.264" />
+        <entry key="..\:/Users/ROG/Desktop/COMPUTER SCIENCE/Sem 5/CAT 304/Pocket_Guide_App/app/src/main/res/layout/activity_places_video.xml" value="0.1" />
+        <entry key="..\:/Users/ROG/Desktop/COMPUTER SCIENCE/Sem 5/CAT 304/Pocket_Guide_App/app/src/main/res/layout/activity_places_videos.xml" value="0.264" />
+        <entry key="..\:/Users/ROG/Desktop/COMPUTER SCIENCE/Sem 5/CAT 304/Pocket_Guide_App/app/src/main/res/layout/item_container_video.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ROG/Desktop/COMPUTER SCIENCE/Sem 5/CAT 304/Pocket_Guide_App/app/src/main/res/layout/single_video_row.xml" value="0.2" />
+
+
       </map>
     </option>
   </component>

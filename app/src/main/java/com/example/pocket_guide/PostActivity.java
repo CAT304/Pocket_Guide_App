@@ -1,8 +1,11 @@
 package com.example.pocket_guide;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.icu.text.SimpleDateFormat;
+import android.icu.util.TimeZone;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -23,13 +26,19 @@ import com.hendraanggrian.appcompat.socialview.Hashtag;
 import com.hendraanggrian.appcompat.widget.HashtagArrayAdapter;
 import com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView;
 import com.theartofdev.edmodo.cropper.CropImage;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Objects;
+
+
+
 public class PostActivity extends AppCompatActivity {
     private Uri imageUri;
     private String imageUrl;
     private ImageView imageAdded;
     SocialAutoCompleteTextView description;
+    SocialAutoCompleteTextView location_name;
     private DatabaseReference databaseReference;
     private StorageReference filePath;
 
@@ -41,6 +50,7 @@ public class PostActivity extends AppCompatActivity {
         imageAdded = findViewById(R.id.image_added);
         TextView post = findViewById(R.id.post);
         description = findViewById(R.id.description);
+        location_name = findViewById(R.id.location_name);
         close.setOnClickListener(v -> {
             startActivity(new Intent(PostActivity.this , DummyActivity.class));
             finish();
@@ -68,17 +78,24 @@ public class PostActivity extends AppCompatActivity {
                     databaseReference = FirebaseDatabase.getInstance().getReference("Posts");
                     String Post_ID = databaseReference.push().getKey();
 
+                    Date date = new Date();
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault());
+                    sdf.setTimeZone(TimeZone.getTimeZone("GMT+08:00"));
+                    String PostTime = sdf.format(date);
+
+                    Toast.makeText(this, PostTime, Toast.LENGTH_SHORT).show();
                     Toast.makeText(this, Post_ID, Toast.LENGTH_SHORT).show();
                     Toast.makeText(this, imageUrl, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, location_name.getText().toString(), Toast.LENGTH_SHORT).show();
                     Toast.makeText(this, description.getText().toString(), Toast.LENGTH_SHORT).show();
 
-                    String Test_ID = "testid3"; // set the user id
                     HashMap<String , Object> map = new HashMap<>();
                     map.put("postid" , Post_ID);
                     map.put("imageurl" , imageUrl);
                     map.put("description" , description.getText().toString());
-                    map.put("publisher" , Test_ID);
-                    //map.put("publisher" , FirebaseAuth.getInstance().getCurrentUser().getUid()); ----------------------> gotta change back this line
+                    map.put("publisher" , FirebaseAuth.getInstance().getCurrentUser().getUid());
+                    map.put("location_name", location_name.getText().toString());
+                    map.put("post_time", PostTime);
 
                     if (Post_ID != null) {
                         databaseReference.child(Post_ID).setValue(map);
