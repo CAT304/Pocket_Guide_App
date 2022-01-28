@@ -103,7 +103,7 @@ public class PostActivity extends AppCompatActivity {
                     Toast.makeText(this, "Data inserted", Toast.LENGTH_SHORT).show();
                 }
                 pd.dismiss();
-                startActivity(new Intent(PostActivity.this , DummyActivity.class));
+                startActivity(new Intent(PostActivity.this , MainActivity.class));
                 finish();
             }).addOnFailureListener(e -> Toast.makeText(PostActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show());
         } else {
