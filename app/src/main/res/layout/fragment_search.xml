@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="-100dp"
                 android:contentDescription="@string/search_location"
-                android:src="@drawable/ic_search_foreground" />
+                android:src="@drawable/common_google_signin_btn_icon_dark" />
 
             <com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView
                 android:id="@+id/search_bar"
