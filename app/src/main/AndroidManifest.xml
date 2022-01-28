@@ -3,7 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.pocket_guide">
 
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -21,6 +26,12 @@
             android:exported="false" />
         <activity
             android:name=".StartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DummyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -42,6 +53,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
     </application>
 
 </manifest>
