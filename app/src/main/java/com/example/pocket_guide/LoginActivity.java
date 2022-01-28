@@ -2,6 +2,10 @@ package com.example.pocket_guide;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.NavHostController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -14,6 +18,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.pocket_guide.Fragment.NewsFeed;
+import com.example.pocket_guide.Model.Display_Post;
+import com.example.pocket_guide.databinding.FragmentNewsFeedBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -55,8 +62,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ProgressBar pd = new ProgressBar(LoginActivity.this);
-                //pd.setMessage("Please Wait...");
-                //pd.show();
 
                 String str_email = email.getText().toString();
                 String str_password = password.getText().toString();
@@ -76,8 +81,7 @@ public class LoginActivity extends AppCompatActivity {
                                         reference.addValueEventListener(new ValueEventListener() {
                                             @Override
                                             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                                //pd.dismiss();
-                                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                                 startActivity(intent);
                                                 finish();
@@ -85,11 +89,9 @@ public class LoginActivity extends AppCompatActivity {
 
                                             @Override
                                             public void onCancelled(@NonNull DatabaseError error) {
-                                                //pd.dismiss();
                                             }
                                         });
                                     } else{
-                                        //pd.dismiss();
                                         Toast.makeText(LoginActivity.this, "Authentication failed", Toast.LENGTH_SHORT).show();
                                     }
                                 }
