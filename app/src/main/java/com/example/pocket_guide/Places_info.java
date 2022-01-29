@@ -37,14 +37,14 @@ import java.util.Objects;
 public class Places_info extends AppCompatActivity {
         TextView a,b , name;
         EditText review;
-        FloatingActionButton btn;
+        FloatingActionButton btn , loc;
         Button etr;
         ImageView img;
-        DatabaseReference reff , rew , lrew;
+        DatabaseReference reff , rew , lrew , locref;
         StorageReference storageReference;
         Uri imageuri;
         ListView listView;
-        String placename, place_name;
+        String placename, place_name , pllocation;
 
 
         @Override
@@ -57,12 +57,13 @@ public class Places_info extends AppCompatActivity {
                         place_name = intent.getString("Name");
                         getSharedPreferences("Name", MODE_PRIVATE).edit().putString("Name", place_name).apply();
                 }
-
+//                placename = "Bukit Bendera";
                 placename = place_name;
                 a=(TextView) findViewById(R.id.Ratings);
                 b=(TextView) findViewById(R.id.Details);
                 name=(TextView) findViewById(R.id.place_name) ;
                 btn=(FloatingActionButton)findViewById(R.id.acptbtn);
+                loc = (FloatingActionButton)findViewById(R.id.locbtn);
                 img=(ImageView)findViewById(R.id.picplace);
 
                 review = findViewById(R.id.etReview);
@@ -80,7 +81,18 @@ public class Places_info extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                                 Intent i = new Intent(Places_info.this,Places_video.class);
+                                i.putExtra("Vtitle",placename);
                                 startActivity(i);
+                        }
+                });
+
+                loc.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                                Intent intent1 = new Intent(Intent.ACTION_VIEW,
+                                        Uri.parse("google.navigation:q="+ pllocation));
+                                intent1.setPackage("com.google.android.apps.maps");
+                                startActivity(intent1);
                         }
                 });
 
@@ -124,7 +136,7 @@ public class Places_info extends AppCompatActivity {
                                         temp_review1 = temp_review1.substring(0, temp_review1.length() - 1);
                                         list.add(Objects.requireNonNull(temp_review1));
                  //                       Toast.makeText(Places_info.this,"Data"+ snapshot.getValue().toString(),Toast.LENGTH_SHORT).show();
-                                        Toast.makeText(Places_info.this,"Data"+ temp_review1,Toast.LENGTH_SHORT).show();
+ //                                       Toast.makeText(Places_info.this,"Data"+ temp_review1,Toast.LENGTH_SHORT).show();
                                 }
                                 adapter.notifyDataSetChanged();
 
@@ -137,15 +149,18 @@ public class Places_info extends AppCompatActivity {
                 });
 
 
+
                 reff= FirebaseDatabase.getInstance().getReference().child("Places").child(placename);
                 reff.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                                 String details = Objects.requireNonNull(snapshot.child("Details").getValue()).toString();
                                 String ratings = Objects.requireNonNull(snapshot.child("Ratings").getValue()).toString();
+                                String loc = Objects.requireNonNull(snapshot.child("Location").getValue()).toString();
                                 a.setText(ratings);
                                 b.setText(details);
                                 name.setText(placename);
+                                pllocation = loc;
                         }
 
                         @Override
