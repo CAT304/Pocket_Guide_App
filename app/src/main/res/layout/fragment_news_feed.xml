@@ -41,6 +41,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="35dp"
+                    android:id="@+id/log_out"
                     android:layout_alignParentEnd="true"
                     android:src="@drawable/ic_inbox"/>
 
