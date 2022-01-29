@@ -10,11 +10,12 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Pocket_Guide"
-        tools:targetApi="m">
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:targetApi="O">
+
         <activity
             android:name=".CommentsActivity"
             android:exported="false" />
