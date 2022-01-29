@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.pocket_guide.Model.Display_Post;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -59,8 +60,6 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 pd = new ProgressBar(RegisterActivity.this);
-               // pd.setMessage("Please Wait..");
-              //  pd.show();
 
                 String str_username = username.getText().toString();
                 String str_fullname = fullname.getText().toString();
@@ -112,7 +111,6 @@ public class RegisterActivity extends AppCompatActivity {
                             });
 
                         } else {
-                             //   pd.dismiss();
                                 Toast.makeText(RegisterActivity.this, "You can't register with this email or password", Toast.LENGTH_SHORT).show();
                         }
                     }

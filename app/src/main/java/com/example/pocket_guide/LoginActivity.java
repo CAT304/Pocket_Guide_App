@@ -3,7 +3,6 @@ package com.example.pocket_guide;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -55,8 +54,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ProgressBar pd = new ProgressBar(LoginActivity.this);
-                //pd.setMessage("Please Wait...");
-                //pd.show();
 
                 String str_email = email.getText().toString();
                 String str_password = password.getText().toString();
@@ -76,8 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                                         reference.addValueEventListener(new ValueEventListener() {
                                             @Override
                                             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                                //pd.dismiss();
-                                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                                 startActivity(intent);
                                                 finish();
@@ -85,11 +81,9 @@ public class LoginActivity extends AppCompatActivity {
 
                                             @Override
                                             public void onCancelled(@NonNull DatabaseError error) {
-                                                //pd.dismiss();
                                             }
                                         });
                                     } else{
-                                        //pd.dismiss();
                                         Toast.makeText(LoginActivity.this, "Authentication failed", Toast.LENGTH_SHORT).show();
                                     }
                                 }
