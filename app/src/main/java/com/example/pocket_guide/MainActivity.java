@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new BookmarkFragment());
                     break;
                 case R.id.nav_video:
-                    startActivity(new Intent(MainActivity.this,Places_video.class));
+                    startActivity(new Intent(MainActivity.this,All_videos.class));
                     break;
             }
 
