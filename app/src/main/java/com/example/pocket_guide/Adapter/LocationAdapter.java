@@ -52,7 +52,7 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.ViewHo
         holder.location_image.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(mContext, DummyActivity.class);
+                Intent intent = new Intent(mContext, Places_info.class);
                 intent.putExtra("Name", location.getName());
                 mContext.startActivity(intent);
             }

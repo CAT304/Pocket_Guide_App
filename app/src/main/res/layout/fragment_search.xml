@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.SearchFragment">
+    tools:context=".Fragments.SearchFragment"
+    android:background="@drawable/places_background">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -22,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="-100dp"
                 android:contentDescription="@string/search_location"
-                android:src="@drawable/ic_close2_foreground" />
+                android:src="@drawable/ic_search" />
 
             <com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView
                 android:id="@+id/search_bar"
@@ -30,6 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="30dp"
+                android:paddingLeft="10dp"
                 android:background="@android:color/transparent"
                 android:hint="Search..." />
 
