@@ -83,12 +83,6 @@ public class PostActivity extends AppCompatActivity {
                     sdf.setTimeZone(TimeZone.getTimeZone("GMT+08:00"));
                     String PostTime = sdf.format(date);
 
-                    Toast.makeText(this, PostTime, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(this, Post_ID, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(this, imageUrl, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(this, location_name.getText().toString(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(this, description.getText().toString(), Toast.LENGTH_SHORT).show();
-
                     HashMap<String , Object> map = new HashMap<>();
                     map.put("postid" , Post_ID);
                     map.put("imageurl" , imageUrl);
@@ -100,7 +94,7 @@ public class PostActivity extends AppCompatActivity {
                     if (Post_ID != null) {
                         databaseReference.child(Post_ID).setValue(map);
                     }
-                    Toast.makeText(this, "Data inserted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Post Uploaded!", Toast.LENGTH_SHORT).show();
                 }
                 pd.dismiss();
                 startActivity(new Intent(PostActivity.this , MainActivity.class));
