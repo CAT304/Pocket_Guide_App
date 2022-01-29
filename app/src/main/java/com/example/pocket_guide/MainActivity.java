@@ -6,8 +6,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.SharedMemory;
 
+import com.example.pocket_guide.Fragments.BookmarkFragment;
 import com.example.pocket_guide.Fragments.NewsFeed;
 import com.example.pocket_guide.Fragments.SearchFragment;
 import com.example.pocket_guide.databinding.ActivityMainBinding;
@@ -21,7 +24,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new NewsFeed());
+
+        Bundle intent = getIntent().getExtras();
+        if(intent != null){
+            String publisher = intent.getString("publisherid");
+
+            SharedPreferences.Editor editor = getSharedPreferences("PREFS", MODE_PRIVATE).edit();
+            editor.putString("profileid",publisher);
+            editor.apply();
+            replaceFragment(new NewsFeed());
+        }else {
+            replaceFragment(new NewsFeed());
+        }
 
 
         binding.bottomNavigation.setOnItemSelectedListener(item -> {
@@ -36,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this,PostActivity.class));
                     break;
                 case R.id.nav_heart:
+                    replaceFragment(new BookmarkFragment());
                     break;
                 case R.id.nav_video:
                     startActivity(new Intent(MainActivity.this,Places_video.class));
