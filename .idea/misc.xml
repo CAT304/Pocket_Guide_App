@@ -3,29 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21296296296296297" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/drawable/button_background.xml" value="0.24259259259259258" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/drawable/button_black.xml" value="0.24259259259259258" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/drawable/edittext_background.xml" value="0.2703125" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/layout/activity_login.xml" value="0.176" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/layout/activity_main.xml" value="0.12360688956433637" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/layout/activity_register.xml" value="0.176" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/layout/activity_start.xml" value="0.19647822057460612" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/menu/menu_main.xml" value="0.176" />
+        <entry key="..\:/Pocket_Guide_App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pocket_Guide/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.18333333333333332" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/activity_all_users_post.xml" value="0.14" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/activity_comments.xml" value="0.22" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/activity_display_post.xml" value="0.25" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/activity_places_info.xml" value="0.1927236971484759" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/activity_post.xml" value="0.25" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/activity_register.xml" value="0.22" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/activity_start.xml" value="0.1802536231884058" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/comment_item.xml" value="0.22" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/content_main.xml" value="0.22" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/foto_items.xml" value="0.25" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/fragment_bookmark.xml" value="0.25" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/fragment_first.xml" value="0.18342391304347827" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/fragment_news_feed.xml" value="0.25" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/fragment_search.xml" value="0.33" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/fragment_second.xml" value="0.18342391304347827" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/post_item_display.xml" value="0.22" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/layout/user_item.xml" value="0.15715579710144928" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/menu/bottom_navigation.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/ASUS/StudioProjects/Pocket_Guide_App/app/src/main/res/menu/menu_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ROG/Desktop/COMPUTER SCIENCE/Sem 5/CAT 304/Pocket_Guide_App/app/src/main/res/layout/activity_all_videos.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ROG/Desktop/COMPUTER SCIENCE/Sem 5/CAT 304/Pocket_Guide_App/app/src/main/res/layout/activity_dummy.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ROG/Desktop/COMPUTER SCIENCE/Sem 5/CAT 304/Pocket_Guide_App/app/src/main/res/layout/activity_places_info.xml" value="0.264" />
+        <entry key="..\:/Users/ROG/Desktop/COMPUTER SCIENCE/Sem 5/CAT 304/Pocket_Guide_App/app/src/main/res/layout/activity_places_video.xml" value="0.1" />
+        <entry key="..\:/Users/ROG/Desktop/COMPUTER SCIENCE/Sem 5/CAT 304/Pocket_Guide_App/app/src/main/res/layout/activity_places_videos.xml" value="0.264" />
+        <entry key="..\:/Users/ROG/Desktop/COMPUTER SCIENCE/Sem 5/CAT 304/Pocket_Guide_App/app/src/main/res/layout/item_container_video.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ROG/Desktop/COMPUTER SCIENCE/Sem 5/CAT 304/Pocket_Guide_App/app/src/main/res/layout/single_video_row.xml" value="0.2" />
       </map>
     </option>
   </component>
